@@ -267,155 +267,139 @@
     </nav>
 
     <!-- SECTION 1: HERO (Cinematic Layout with Balanced Left Content & Right Frosted Glass Form) -->
-    <section id="home" class="relative overflow-hidden pt-20">
-        <section id="hero" class="relative w-full min-h-[92vh] flex items-center justify-center bg-[#07111E] overflow-hidden">
-            <!-- Background Image Carousel -->
-            <div class="absolute inset-0 w-full h-full z-0">
-                <img src="assets/extracted/hero_balcony_sunset.png" alt="Balcony Sunset View" class="absolute inset-0 w-full h-full object-cover animate-hero-1 filter brightness-[0.75] contrast-[1.05]" />
-                <img src="assets/extracted/Raymond-Realty-mahim-web-banner.png" alt="Tower Elevation" class="absolute inset-0 w-full h-full object-cover animate-hero-2 opacity-0 filter brightness-[0.75] contrast-[1.05]" />
-                <!-- Luxury Navy Gradient Vignette -->
-                <div class="absolute inset-0 bg-gradient-to-r from-[#07111E]/95 via-[#0A192F]/75 to-[#07111E]/60 z-10"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#07111E] via-transparent to-black/30 z-10"></div>
+        <!-- Full Section Container -->
+    <!-- Add pt-16 to offset the fixed nav height; add scroll-mt-16 for anchor targeting -->
+    <section id="home" class="relative overflow-hidden pt-16 scroll-mt-16">
+        <section id="hero" class="relative w-full min-h-screen bg-gray-100 overflow-hidden scroll-mt-16">
+            <!-- Background Image (Visible on mobile at top) -->
+            <div class="lg:hidden w-full relative">
+                <img src="assets/extracted/mobile-hero-1.png" alt="Background 1" class="w-full h-auto object-cover animate-hero-1" />
+                <img src="assets/extracted/mobile-hero-2.png" alt="Background 2" class="absolute inset-0 w-full h-full object-cover animate-hero-2 opacity-0" />
             </div>
 
-            <!-- Hero Main Content Grid -->
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-12 lg:py-16">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    
-                    <!-- Left Hero Content (7 Columns on Desktop) -->
-                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <!-- Top Badges -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-[#DFB757] border border-amber-400/40 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-md">
-                                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Launching Soon in Mahim
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-slate-200 border border-white/20 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
-                                By Raymond Realty
-                            </span>
+            <!-- Absolute BG Image for large screens -->
+            <div class="hidden lg:block absolute top-0 left-0 w-full h-full z-0">
+                <img src="assets/extracted/hero_balcony_sunset.png" alt="Background 1" class="absolute inset-0 w-full h-full object-cover animate-hero-1" />
+                <img src="assets/extracted/Raymond-Realty-mahim-web-banner.png" alt="Background 2" class="absolute inset-0 w-full h-full object-cover animate-hero-2 opacity-0" />
+            </div>
+
+            <!-- Content -->
+            <div
+                class="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-start min-h-screen p-6 gap-8 mt-6">
+
+                <!-- Left Card Wrapper (remains on the left) -->
+                <div
+                    class="w-full lg:w-[28%] bg-white/90 shadow-lg rounded-xl p-4 border flex flex-col justify-center">
+                    <div class="space-y-3">
+                        <p class="text-base text-gray-700 font-semibold uppercase text-center">
+                            Launching Soon
+                        </p>
+                        <h2 class="text-xl font-heading font-bold text-[#0A192F] text-center">Raymond Mahim Bay Sea View
+                        </h2>
+                        <!-- <p class="text-sm text-red-700 font-body text-center font-bold uppercase">Biggest Launch of Central Suburbs in Kanjur!</p> -->
+                        <p class="text-sm text-gray-500 font-body text-center"><strong>Mahim, Mumbai
+
+                            </strong><br>By Raymond Realty
+                        </p>
+
+                        <div class="flex justify-between text-sm text-gray-700 font-medium border-t border-b py-2">
+                            <div>
+                                <p class="text-xs text-gray-600 text-center">LAND</p>
+                                <p class="text-center text-black">2 Acres</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600 text-center">Towers</p>
+                                <p class="text-center text-black">1 Tower</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600 text-center">STATUS</p>
+                                <p class="text-center text-black">Coming Soon</p>
+                            </div>
                         </div>
 
-                        <!-- Main Title -->
-                        <div class="space-y-2">
-                            <h1 class="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-wide leading-tight">
-                                Raymond Mahim Bay
-                                <span class="gold-gradient-text block mt-1">Sea View Residences</span>
-                            </h1>
-                            <p class="text-sm sm:text-base text-gray-300 font-montserrat max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                                Mahim Causeway, Mumbai • Ultra Luxury 3 & 4 BHK residences with uninterrupted Arabian Sea vistas from the very 1st habitable floor.
+                        <div class="animated-gradient-button block text-center text-white font-heading font-semi-bold text-center text-sm rounded-lg px-3 py-2">
+                            <p><span class="font-bold">EOI Opens from Navratri</span></p>
+                        </div>
+                        <div class="animated-gradient-button block text-center text-white font-heading font-semi-bold text-center text-sm rounded-lg px-3 py-2">
+                            <p><span class="font-bold">Clear Sea-Face Apartments</span></p>
+                        </div>
+
+                        <div
+                            class="animated-gradient-button block text-center text-white font-heading font-semi-bold text-center text-sm rounded-lg px-3 py-2">
+                            <!-- <p class="font-bold">Register Your Interest</p> -->
+                            <p>Open-to-Sky Rooftop Amenities</p>
+                            <p>Uninterrupted Sea Views</p>
+                            <p>31 Habitable Floors</p>
+                        </div>
+
+                        <div class="text-gray-800">
+                            <p class="text-sm text-center">
+                               Ultra Luxury 3 & 4 BHK Residences
                             </p>
+                            <p class="text-lg text-center font-heading font-bold mt-1">
+                                <span class="text-base font-medium text-gray-700">Starting At <br><strong style="font-size: 30px;" class="text-[#0A192F]">₹7.80 Cr<span class="text-[#B8860B]">++</span></strong></span>
+                            </p>
+
                         </div>
 
-                        <!-- 4 Stat Badges (Horizontal Specs Strip) -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-w-xl mx-auto lg:mx-0">
-                            <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                                <p class="text-[10px] text-amber-300 uppercase tracking-widest font-semibold">Land Estate</p>
-                                <p class="text-base font-bold text-white font-cinzel mt-0.5">2 Acres</p>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                                <p class="text-[10px] text-amber-300 uppercase tracking-widest font-semibold">Habitable</p>
-                                <p class="text-base font-bold text-white font-cinzel mt-0.5">31 Floors</p>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                                <p class="text-[10px] text-amber-300 uppercase tracking-widest font-semibold">Panorama</p>
-                                <p class="text-base font-bold text-white font-cinzel mt-0.5">Sea Face</p>
-                            </div>
-                            <div class="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15 text-center">
-                                <p class="text-[10px] text-amber-300 uppercase tracking-widest font-semibold">Starting At</p>
-                                <p class="text-base font-bold text-[#DFB757] font-cinzel mt-0.5">₹7.80 Cr++</p>
-                            </div>
-                        </div>
+                        <a href="#" onclick="openPopup('Download Brochure')"
+                            class="animated-gradient-button relative flex items-center justify-center gap-2 text-white font-semibold py-2 px-6 rounded-lg text-center shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden">
+                            <span class="animate-pulse-scale">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline-block" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                                </svg>
+                            </span>
+                            Download Brochure
+                        </a>
 
-                        <!-- Feature Highlight Strip -->
-                        <div class="bg-[#0A192F]/80 backdrop-blur-md rounded-xl p-3.5 border border-amber-500/30 max-w-xl mx-auto lg:mx-0 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-200">
-                            <div class="flex items-center gap-1.5">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#DFB757]"></i>
-                                <span>Low-Density Estate</span>
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#DFB757]"></i>
-                                <span>Open-to-Sky Rooftop Deck</span>
-                            </div>
-                            <div class="flex items-center gap-1.5">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#DFB757]"></i>
-                                <span>EOI ₹9L / ₹18L</span>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <!-- Action Buttons -->
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                            <button onclick="openPopup('Download Brochure', 'Hero Brochure Button')"
-                                class="animated-gradient-button w-full sm:w-auto px-8 py-4 rounded-xl text-xs uppercase tracking-wider font-bold shadow-xl flex items-center justify-center gap-2">
-                                <i data-lucide="download" class="w-4 h-4"></i> Download Brochure
+                <!-- Right Sticky Form -->
+                <div class="w-full lg:w-[28%]">
+                    <!-- Increase top offset to clear the fixed nav (64px) comfortably -->
+                    <div class="sticky top-24 bg-white/90 p-6 rounded-lg shadow-lg border">
+                        <h3 class="text-xl font-semibold mb-4 text-center">Register for Best Offers</h3>
+
+                        <form class="space-y-4" action="sendmail.php" method="POST">
+                            <!-- Name -->
+                            <input type="text" name="name" placeholder="Name" class="w-full px-4 py-2 border rounded"
+                                required />
+
+                            <!-- Email -->
+                            <input type="email" name="email" placeholder="Email" class="w-full px-4 py-2 border rounded"
+                                required />
+
+                            <!-- Phone -->
+                            <div class="flex gap-2">
+                                <select name="country_code" class="w-1/3 px-2 py-2 border rounded" required>
+                                    <option value="+91">+91</option>
+                                    <option value="+1">+1</option>
+                                </select>
+                                <input type="tel" name="phone" placeholder="Mobile"
+                                    class="w-2/3 px-4 py-2 border rounded" required />
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit"
+                                class="w-full animated-gradient-button block text-center font-bold py-3 rounded-xl shadow-md text-sm uppercase tracking-wider">
+                                Register Now
                             </button>
-                            <a href="#pricing"
-                                class="navy-button w-full sm:w-auto px-7 py-4 rounded-xl text-xs uppercase tracking-wider font-semibold shadow-lg text-center flex items-center justify-center gap-2">
-                                View Configurations <i data-lucide="arrow-down" class="w-4 h-4 text-[#DFB757]"></i>
-                            </a>
-                        </div>
+                        </form>
+
+                        <p class="text-xs text-gray-600 mt-3">
+                            I authorize company representatives to call me. This overrides DND/NDNC.
+                        </p>
                     </div>
-
-                    <!-- Right Hero Lead Form (5 Columns on Desktop - Glassmorphic Card) -->
-                    <div class="lg:col-span-5 max-w-md mx-auto w-full">
-                        <div class="navy-glass-card p-6 sm:p-8 rounded-3xl shadow-2xl relative overflow-hidden border border-amber-500/30">
-                            <!-- Subtle Glow -->
-                            <div class="absolute -top-16 -right-16 w-36 h-36 bg-amber-500/20 rounded-full blur-2xl pointer-events-none"></div>
-
-                            <div class="text-center mb-6">
-                                <span class="inline-block px-3 py-0.5 bg-amber-400/15 text-[#DFB757] rounded-full text-[10px] font-bold uppercase tracking-widest mb-1.5 border border-amber-400/30">
-                                    Priority Booking Window
-                                </span>
-                                <h3 class="font-cinzel text-xl sm:text-2xl font-bold text-white">Register For Best Offers</h3>
-                                <p class="text-xs text-gray-300 font-montserrat mt-1">Get exclusive pre-launch pricing & unit availability</p>
-                            </div>
-
-                            <form class="space-y-4" action="sendmail.php" method="POST">
-                                <input type="hidden" name="config" value="Hero Sticky Form Registration">
-
-                                <!-- Name -->
-                                <div>
-                                    <label class="block text-[11px] font-medium text-gray-300 mb-1">Your Full Name</label>
-                                    <input type="text" name="name" placeholder="Enter full name" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:border-[#DFB757] focus:ring-1 focus:ring-[#DFB757] outline-none transition-all" required />
-                                </div>
-
-                                <!-- Email -->
-                                <div>
-                                    <label class="block text-[11px] font-medium text-gray-300 mb-1">Email Address</label>
-                                    <input type="email" name="email" placeholder="Enter email address" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:border-[#DFB757] focus:ring-1 focus:ring-[#DFB757] outline-none transition-all" required />
-                                </div>
-
-                                <!-- Phone -->
-                                <div>
-                                    <label class="block text-[11px] font-medium text-gray-300 mb-1">Phone Number</label>
-                                    <div class="flex gap-2">
-                                        <select name="country_code" class="w-1/3 bg-white/10 border border-white/20 rounded-xl px-2 py-3 text-white text-sm focus:border-[#DFB757] outline-none">
-                                            <option value="+91" class="text-black">+91 (IN)</option>
-                                            <option value="+1" class="text-black">+1 (US)</option>
-                                            <option value="+971" class="text-black">+971 (UAE)</option>
-                                            <option value="+44" class="text-black">+44 (UK)</option>
-                                        </select>
-                                        <input type="tel" name="phone" placeholder="10-digit mobile" pattern="[0-9]{10}" maxlength="10" class="w-2/3 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 text-sm focus:border-[#DFB757] focus:ring-1 focus:ring-[#DFB757] outline-none transition-all" required />
-                                    </div>
-                                </div>
-
-                                <!-- Submit -->
-                                <button type="submit" class="w-full animated-gradient-button block text-center font-bold py-3.5 rounded-xl shadow-lg text-xs uppercase tracking-wider mt-2">
-                                    Instant Registration
-                                </button>
-                            </form>
-
-                            <p class="text-[10px] text-gray-400 text-center mt-3 leading-tight">
-                                🔒 Authorized Partner: <strong>Vedant Lifespaces</strong> (MahaRERA: A51700047864)
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
     </section>
 
     <!-- SECTION 2: HIGHLIGHTS (Warm Sandstone Architectural Showcase) -->
-    <section id="highlights" class="py-16 md:py-24 bg-[#FAF7F2] relative overflow-hidden">
+<section id="highlights" class="py-16 md:py-24 bg-[#FAF7F2] relative overflow-hidden">
         <!-- Subtle Pattern Overlay -->
         <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#0A192F_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
 
